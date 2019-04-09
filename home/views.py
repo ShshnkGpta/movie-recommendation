@@ -9,6 +9,7 @@ def index(request):
 
 def search(request):
     form = forms.SearchForm()
+    r_list = []
 
     if request.method == 'POST':
         form = forms.SearchForm(request.POST)
@@ -24,4 +25,4 @@ def search(request):
                 print(r_list)
 
 
-    return render(request, 'home/search_page.html',{"form":form,})
+    return render(request, 'home/search_page.html',{"form":form, "flag":flag,"r_list":r_list,})

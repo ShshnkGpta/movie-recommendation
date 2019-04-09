@@ -12,5 +12,14 @@
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
         </div>
+        <div class="container">
+            {% if flag == False %}
+                <p> Not found </p>
+            {% else %}
+                {% for i in r_list %}
+                    {{i}}<br>
+                {% endfor %}
+            {% endif %}
+        </div>
     </body>
 </html>
