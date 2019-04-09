@@ -10,6 +10,7 @@ def index(request):
 def search(request):
     form = forms.SearchForm()
     r_list = []
+    flag = "null"
 
     if request.method == 'POST':
         form = forms.SearchForm(request.POST)
