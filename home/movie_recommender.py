@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
 ###### helper functions. Use them when needed #######
 def get_title_from_index(index):
 	return df[df.index == index]["title"].values[0]
@@ -11,9 +12,9 @@ def get_index_from_title(title):
 ##################################################
 
 ##Step 1: Read CSV File
-df = pd.read_csv("static/movie_dataset_pp.csv")
+file_dir = "movie_dataset_pp.csv"
+df = pd.read_csv(file_dir)
 #print(df.columns)
-
 
 ##Step 2: Select Features
 features = ['keywords','cast','genres','director']
